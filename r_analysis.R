@@ -59,7 +59,7 @@ allData$Activity <- factor(allData$Activity, levels = a_label[,1], labels = a_la
 allData$Subject <- as.factor(allData$Subject)
 
 
-#5. generate tidy data
+#5. Generate tidy data
 meltedData <- melt(allData, id = c("Subject", "Activity"))
 tidyData <- dcast(meltedData, Subject + Activity ~ variable, mean)
 
